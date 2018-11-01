@@ -1,13 +1,13 @@
-package com.apap.tutorial6.service;
+package com.apap.tutorial7.service;
 
 import java.util.Optional;
-
-import com.apap.tutorial6.model.PilotModel;
-import com.apap.tutorial6.repository.PilotDb;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.apap.tutorial7.model.PilotModel;
+import com.apap.tutorial7.repository.PilotDb;
 
 /**
  * PilotServiceImpl
@@ -37,4 +37,18 @@ public class PilotServiceImpl implements PilotService {
     public Optional<PilotModel> getPilotDetailById(long id) {
         return pilotDb.findById(id);
     }
+
+	@Override
+	public void deletePilot(PilotModel pilot) {
+		// TODO Auto-generated method stub
+		pilotDb.delete(pilot);
+	}
+
+	@Override
+	public void updatePilot(long pilotId, PilotModel pilot) {
+		// TODO Auto-generated method stub
+		PilotModel pilotLama = pilotDb.findById(pilotId).get();
+		pilotLama.setFlyHour(pilot.getFlyHour());
+		pilotLama.setName(pilot.getName());
+	}
 }

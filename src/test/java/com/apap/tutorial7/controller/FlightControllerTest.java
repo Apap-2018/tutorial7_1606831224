@@ -1,4 +1,4 @@
-package com.apap.tutorial6.controller;
+package com.apap.tutorial7.controller;
 
 import java.sql.Date;
 import java.util.Optional;
@@ -16,9 +16,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import com.apap.tutorial6.model.FlightModel;
-import com.apap.tutorial6.service.FlightService;
-import com.apap.tutorial6.service.PilotService;
+import com.apap.tutorial7.controller.FlightController;
+import com.apap.tutorial7.model.FlightModel;
+import com.apap.tutorial7.service.FlightService;
+import com.apap.tutorial7.service.PilotService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(FlightController.class)

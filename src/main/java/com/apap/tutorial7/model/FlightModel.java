@@ -1,4 +1,4 @@
-package com.apap.tutorial6.model;
+package com.apap.tutorial7.model;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -16,6 +16,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -89,6 +90,7 @@ public class FlightModel implements Serializable {
     /**
      * @param pilot the pilot to set
      */
+    @JsonProperty
     public void setPilot(PilotModel pilot) {
         this.pilot = pilot;
     }
@@ -126,6 +128,7 @@ public class FlightModel implements Serializable {
     /**
      * @return the pilot
      */
+    @JsonIgnore
     public PilotModel getPilot() {
         return pilot;
     }

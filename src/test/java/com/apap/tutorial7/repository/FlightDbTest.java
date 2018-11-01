@@ -1,4 +1,4 @@
-package com.apap.tutorial6.repository;
+package com.apap.tutorial7.repository;
 
 
 
@@ -17,8 +17,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.apap.tutorial6.model.FlightModel;
-import com.apap.tutorial6.model.PilotModel;
+import com.apap.tutorial7.model.FlightModel;
+import com.apap.tutorial7.model.PilotModel;
+import com.apap.tutorial7.repository.FlightDb;
 
 import ch.qos.logback.core.boolex.Matcher;
 

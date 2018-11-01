@@ -1,8 +1,8 @@
-package com.apap.tutorial6.service;
+package com.apap.tutorial7.service;
 
 import java.util.Optional;
 
-import com.apap.tutorial6.model.PilotModel;
+import com.apap.tutorial7.model.PilotModel;
 
 /**
  * PilotService
@@ -15,4 +15,8 @@ public interface PilotService {
     void deletePilotByLicenseNumber(String licenseNumber);
 
     Optional<PilotModel> getPilotDetailById(long id);
+
+	void deletePilot(PilotModel pilot);
+
+	void updatePilot(long pilotId, PilotModel pilot);
 }
